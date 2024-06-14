@@ -1,0 +1,12 @@
+#!/bin/bash
+
+pamixer --source `pamixer --list-sources | grep  'alsa_input' | grep -o '[0-9]*' | head -n1` -t;
+
+NOTIF=$(pamixer --source `pamixer --list-sources | grep  'alsa_input' | grep -o '[0-9]*' | head -n1` --get-mute)
+
+case "$NOTIF" in
+	"true") NOTIF="" ;;
+	*) NOTIF="" ;;
+esac
+
+notify-send "$NOTIF";
