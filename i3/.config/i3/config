@@ -212,7 +212,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bindsym $mod+x exec i3lock -f -c 000000
+# bindsym $mod+x exec i3lock -f -c 000000
+bindsym $mod+x exec i3lockmore --image-fill ~/.wallpaper -f
 
 bindsym $mod+shift+x exec ~/.config/rofi/power-menu
 
