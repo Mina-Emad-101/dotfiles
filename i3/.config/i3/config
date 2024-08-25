@@ -290,7 +290,7 @@ exec xrandr --dpi 96
 exec xset r rate 300 30
 exec xset s 0
 exec xset -dpms
-exec feh --bg-fill /usr/share/pixmaps/wallpaper
+exec feh --bg-fill ~/.wallpaper
 exec compton -f -D 2 -c -i 0.9 --detect-rounded-corners --detect-transient --detect-client-leader -e 0.1
 exec --no-startup-id lxsession
 exec ibus-daemon -rxRd
