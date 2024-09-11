@@ -87,4 +87,13 @@ fi
 
 #------------------------------------------------------------------------
 
-echo "$message"
+RESULT=$(curl icanhazip.com | grep "[0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+");
+if [[ $RESULT ]];
+then
+	echo "$UP_LABEL $RESULT";
+else
+	echo "$DOWN_LABEL Unavailable"
+	echo "$DOWN_LABEL Unavailable"
+  echo \#FF0000 # color
+	exit
+fi
