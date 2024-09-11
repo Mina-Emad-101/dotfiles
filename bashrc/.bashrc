@@ -11,6 +11,7 @@ alias grep='grep --color=auto'
 alias tmuxkill='tmux kill-server'
 alias beep='paplay $BEEP'
 alias commitall='git add .; git commit -m'
+alias projects='cd Documents/Projects'
 PS1='[\u@\h \W]\$ '
 
 export EDITOR='nvim'
