@@ -177,6 +177,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 assign [class="vesktop"] $ws2
 assign [class="discord"] $ws2
 assign [class="Spotify"] $ws3
+assign [class="Chromium-browser"] $ws4
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
