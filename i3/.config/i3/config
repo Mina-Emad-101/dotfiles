@@ -178,6 +178,8 @@ assign [class="vesktop"] $ws2
 assign [class="discord"] $ws2
 assign [class="Spotify"] $ws3
 assign [class="Chromium-browser"] $ws4
+assign [class="Postman"] $ws9
+assign [class="MongoDB Compass"] $ws8
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
