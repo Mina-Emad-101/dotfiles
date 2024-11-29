@@ -15,6 +15,7 @@ return {
 					-- "pylsp",
 					"pyright",
 					"jdtls",
+					-- "java_language_server",
 					"html",
 					"cssls",
 					"phpactor",
@@ -65,6 +66,9 @@ return {
 			lspconfig.jdtls.setup({
 				capabilities = capabilities,
 			})
+			-- lspconfig.java_language_server.setup({
+			-- 	capabilities = capabilities,
+			-- })
 			lspconfig.phpactor.setup({
 				capabilities = capabilities,
 			})

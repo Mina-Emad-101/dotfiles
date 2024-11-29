@@ -12,6 +12,7 @@ alias tmuxkill='tmux kill-server'
 alias beep='paplay $BEEP'
 alias commitall='git add .; git commit -m'
 alias projects='cd Documents/Projects'
+alias seagate='cd /run/media/mina/My\ Passport/Seagate\ Backup\ Plus\ Drive/'
 PS1='[\u@\h \W]\$ '
 
 export EDITOR='nvim'
