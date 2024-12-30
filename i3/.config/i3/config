@@ -180,7 +180,9 @@ assign [class="Spotify"] $ws3
 assign [class="Chromium-browser"] $ws4
 assign [class="Postman"] $ws9
 assign [class="MongoDB Compass"] $ws8
+
 for_window [class="org-App" instance="org-App"] floating enable
+for_window [class="Tk" instance="tk"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

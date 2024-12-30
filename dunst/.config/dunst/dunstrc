@@ -27,7 +27,7 @@
     width = (50, 300)
 
     # The maximum height of a single notification, excluding the frame.
-    height = 300
+    height = (0, 300)
 
     # Position the notification in the top right corner
     origin = top-right
@@ -39,7 +39,7 @@
     scale = 0
 
     # Maximum number of notification (0 means no limit)
-    notification_limit = 20
+    notification_limit = 3
 
     ### Progress bar ###
 
@@ -76,7 +76,7 @@
 
     # Show how many messages are currently hidden (because of
     # notification_limit).
-    indicate_hidden = yes
+    indicate_hidden = true
 
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
