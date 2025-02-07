@@ -14,11 +14,14 @@ alias commitall='git add .; git commit -m'
 alias projects='cd ~/Documents/Projects'
 alias upwork='cd ~/Documents/Upwork'
 alias learning='cd ~/Documents/Learning'
+alias eficta='cd ~/Documents/Eficta'
 alias seagate='cd /run/media/mina/My\ Passport/Seagate\ Backup\ Plus\ Drive/'
 PS1='[\u@\h \W]\$ '
 
 export EDITOR='nvim'
 export VISUAL='nvim'
+export TERMINAL='alacritty'
+
 eval "$(starship init bash)"
 
 export PATH="$PATH:~/.config/composer/vendor/bin"
