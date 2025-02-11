@@ -18,11 +18,11 @@ return {
 					-- "java_language_server",
 					"html",
 					"cssls",
-					"phpactor",
-					-- "intelephense",
+					-- "phpactor",
+					"intelephense",
 					-- "stimulus_ls",
 					"clangd",
-					"tsserver",
+					"ts_ls",
 				},
 				handlers = {
 					-- require("lsp-zero").default_setup,
@@ -69,12 +69,12 @@ return {
 			-- lspconfig.java_language_server.setup({
 			-- 	capabilities = capabilities,
 			-- })
-			lspconfig.phpactor.setup({
-				capabilities = capabilities,
-			})
-			-- lspconfig.intelephense.setup({
-			-- 	capabilities = capabilities
+			-- lspconfig.phpactor.setup({
+			-- 	capabilities = capabilities,
 			-- })
+			lspconfig.intelephense.setup({
+				capabilities = capabilities
+			})
 			-- lspconfig.stimulus_ls.setup({
 			-- 	capabilities = capabilities
 			-- })
@@ -87,7 +87,7 @@ return {
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.tsserver.setup({
+			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})
 

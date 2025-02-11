@@ -24,7 +24,7 @@ export TERMINAL='alacritty'
 
 eval "$(starship init bash)"
 
-export PATH="$PATH:~/.config/composer/vendor/bin"
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 export BEEP="/usr/share/sounds/freedesktop/stereo/bell.oga"
 
 source /usr/share/fzf/key-bindings.bash
