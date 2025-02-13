@@ -28,12 +28,12 @@ return {
 				"php",
 				"blade",
 				"c_sharp",
-				"cpp",
 				"c",
 				"lua",
 				"vim",
 				"vimdoc",
 				"query",
+				"json",
 			},
 
 			indent = {

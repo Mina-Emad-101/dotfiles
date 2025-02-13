@@ -1,6 +1,7 @@
 return {
 	"adalessa/laravel.nvim",
 	dependencies = {
+    "kevinhwang91/promise-async",
 		"nvim-telescope/telescope.nvim",
 		"tpope/vim-dotenv",
 		"MunifTanjim/nui.nvim",
