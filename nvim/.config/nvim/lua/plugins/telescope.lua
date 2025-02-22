@@ -26,6 +26,8 @@ return {
 			vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 			vim.keymap.set("n", "<leader>fr", builtin.registers, {})
+			vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, {})
+			vim.keymap.set("n", "<leader>fp", builtin.registers, {})
 			vim.opt.splitright = true
 			vim.opt.splitbelow = true
 		end,
@@ -49,4 +51,23 @@ return {
 			require("telescope").load_extension("ascii")
 		end,
 	},
+	{
+		"nosduco/remote-sshfs.nvim",
+		dependencies = { "nvim-telescope/telescope.nvim" },
+		opts = {
+			-- Refer to the configuration section below
+			-- or leave empty for defaults
+		},
+		config = function()
+			require("remote-sshfs").setup()
+			require("telescope").load_extension("remote-sshfs")
+
+			local api = require("remote-sshfs.api")
+			vim.keymap.set("n", "<leader>rc", api.connect, {})
+			vim.keymap.set("n", "<leader>rd", api.disconnect, {})
+			vim.keymap.set("n", "<leader>re", api.edit, {})
+			vim.keymap.set("n", "<leader>rff", api.find_files, {})
+			vim.keymap.set("n", "<leader>rfg", api.live_grep, {})
+		end,
+	}
 }

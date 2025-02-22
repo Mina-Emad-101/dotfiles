@@ -1,8 +1,6 @@
 #!/bin/bash
 
-tmux rename-window -t 0 'Nvim Config'
-tmux send-keys -t 'Nvim Config' 'cd ~/.config/nvim' C-m
-tmux send-keys -t 'Nvim Config' 'nvim .' C-m
+tmux rename-window -t 0 'Misc'
 
 tmux new-window -n 'Terminal'
 

@@ -24,8 +24,19 @@ export TERMINAL='alacritty'
 
 eval "$(starship init bash)"
 
-export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+export PATH="$PATH:$HOME/.config/composer/vendor/bin:$HOME/.local/scripts/"
 export BEEP="/usr/share/sounds/freedesktop/stereo/bell.oga"
 
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+bind '"\C-f":"tmux-sessionizer\n"'

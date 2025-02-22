@@ -127,7 +127,7 @@ bindsym $mod+z focus child
 bindsym $mod+Shift+minus move scratchpad
 
 # Rofi Calculator
-# bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort > /dev/null"
+bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort > /dev/null"
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
@@ -183,6 +183,7 @@ assign [class="MongoDB Compass"] $ws8
 
 for_window [class="org-App" instance="org-App"] floating enable
 for_window [class="Tk" instance="tk"] floating enable
+for_window [class="Yad"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -221,7 +222,11 @@ bindsym $mod+r mode "resize"
 # bindsym $mod+x exec i3lock -f -c 000000
 bindsym $mod+x exec i3lockmore --image-fill ~/.wallpaper -f
 
+# Power Menu
 bindsym $mod+shift+x exec ~/.config/rofi/power-menu
+
+# Wifi Menu
+bindsym $mod+shift+w exec ~/.config/rofi/wifi-menu
 
 # Toggle Mute and Show Notification
 bindsym control+F2 exec ~/.config/i3/toggle_mute
