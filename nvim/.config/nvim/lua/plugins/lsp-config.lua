@@ -107,7 +107,7 @@ return {
 			vim.keymap.set("n", "]d", vim.diagnostic.goto_next, {})
 
 			-- My Extras
-			vim.keymap.set("n", "<C-a>", vim.lsp.buf.code_action, {})
+			-- vim.keymap.set("n", "<C-a>", vim.lsp.buf.code_action, {})
 			vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, {})
 		end,
 	},
