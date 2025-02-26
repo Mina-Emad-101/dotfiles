@@ -312,7 +312,7 @@ default_border pixel 3
 
 # Window Gaps
 gaps inner 10
-gaps outer 6
+gaps outer 3
 smart_gaps on
 
 #######################################################################
@@ -328,7 +328,7 @@ smart_gaps on
 exec i3-config-wizard
 
 exec xset -dpms
-exec compton -f -D 2 -c -i 0.9 --detect-rounded-corners --detect-transient --detect-client-leader -e 0.1
+exec picom -b
 exec --no-startup-id lxsession
 exec ibus-daemon -rxRd
 exec_always xrandr --dpi 96
