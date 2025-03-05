@@ -107,3 +107,9 @@ function print_block {
 }
 
 print_block
+#
+# Check if clicked
+if [[ "$BLOCK_BUTTON" -eq 1 ]]; then
+    setsid pavucontrol &
+    exit 0
+fi
