@@ -110,6 +110,6 @@ print_block
 #
 # Check if clicked
 if [[ "$BLOCK_BUTTON" -eq 1 ]]; then
-    setsid pavucontrol &
+    i3-msg -q "exec pavucontrol"
     exit 0
 fi
