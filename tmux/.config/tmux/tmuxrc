@@ -1,11 +1,12 @@
 #!/bin/bash
 
 tmux rename-window -t 0 'Misc'
+tmux split-window -h
 
 tmux new-window -n 'Terminal'
 
 tmux new-window -n 'Nvim 1'
-tmux send-keys -t 'Nvim 1' 'nvim .' C-m
+tmux send-keys -t 'Nvim 1' 'nvim' C-m
 
 tmux new-window -n 'Nvim 2'
-tmux send-keys -t 'Nvim 2' 'nvim .' C-m
+tmux send-keys -t 'Nvim 2' 'nvim' C-m
