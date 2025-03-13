@@ -178,8 +178,9 @@ assign [class="vesktop"] $ws2
 assign [class="discord"] $ws2
 assign [class="Spotify"] $ws3
 assign [class="Chromium-browser"] $ws4
-assign [class="Postman"] $ws9
-assign [class="MongoDB Compass"] $ws8
+assign [class="Postman"] $ws8
+assign [class="MongoDB Compass"] $ws9
+assign [class="Navicat"] $ws9
 
 for_window [class="org-App" instance="org-App"] floating enable
 for_window [class="Tk" instance="tk"] floating enable
