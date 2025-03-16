@@ -105,6 +105,11 @@ return {
 			vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, {})
 			vim.keymap.set("n", "]d", vim.diagnostic.goto_next, {})
+			vim.keymap.set("n", "==", vim.lsp.buf.format, {})
+			vim.keymap.set("v", "=", function ()
+				vim.lsp.buf.format()
+				vim.api.nvim_feedkeys("", "m", false)
+			end, {})
 
 			-- My Extras
 			-- vim.keymap.set("n", "<C-a>", vim.lsp.buf.code_action, {})
