@@ -54,4 +54,11 @@ sudo systemctl enable lightdm.service;
 sudo cp -r .themes/Dracula /usr/share/themes/
 sudo cp -r .icons/Dracula /usr/share/icons/;
 
+git clone https://aur.archlinux.org/paru.git;
+cd paru;
+makepkg -si;
+cd ..;
+rm -rf paru;
+paru -S noto-fonts-ar gscreenshot --noconfirm;
+
 sudo rm -rf /after-reboot2.sh;
