@@ -1,2 +1,5 @@
 nvim/.config/nvim/undofiles/
+tmux/.config/tmux/plugins/
+tmux/.local/share/
+tmux/.local/state/
 !.*
