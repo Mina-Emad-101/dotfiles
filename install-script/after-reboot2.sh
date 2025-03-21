@@ -59,6 +59,6 @@ cd paru;
 makepkg -si;
 cd ..;
 rm -rf paru;
-paru -S noto-fonts-ar gscreenshot --noconfirm;
+paru -S noto-fonts-ar gscreenshot navicat16-premium-en --noconfirm;
 
 sudo rm -rf /after-reboot2.sh;
