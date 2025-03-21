@@ -2,11 +2,16 @@
 
 systemctl enable NetworkManager;
 systemctl start NetworkManager;
-pacman -S broadcom-wl linux-headers --noconfirm --needed;
+pacman -Syu broadcom-wl linux-headers --noconfirm --needed;
 sed -i "s/#\s*%sudo/%sudo/" /etc/sudoers;
 groupadd sudo;
 useradd -m -G sudo mina;
-chpasswd mina:3569;
+echo "mina:3569" | chpasswd;
 
-echo "-------------------------------";
-echo "Now Reboot and Login as mina";
+rm -rf /after-reboot.sh;
+
+echo " --------------------------------------- ";
+echo "| WIFI is now available for dell laptop |";
+echo "| Now Reboot and Login as mina          |";
+echo "| then run /after-reboot2.sh            |";
+echo " --------------------------------------- ";
