@@ -5,7 +5,7 @@ sudo pacman -Syu stow git xf86-input-synaptics --noconfirm --needed;
 git config --global user.name "Mina Emad";
 git config --global user.email "menamanos@gmail.com";
 git config --global pull.rebase true;
-git config --global credentials.helper store;
+git config --global credential.helper store;
 git config --global init.defaultBranch main;
 
 git clone https://github.com/mina-emad-101/dotfiles.git;
