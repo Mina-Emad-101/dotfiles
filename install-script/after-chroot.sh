@@ -24,6 +24,8 @@ if [[ -n $win_boot_partition ]]; then
 	grub-mkconfig -o /boot/grub/grub.cfg;
 fi
 
+rm -rf /after-chroot.sh;
+
 echo " ---------------------------------- ";
 echo "| You can edit /boot/grub/grub.cfg |";
 echo "| You can now exit                 |";
