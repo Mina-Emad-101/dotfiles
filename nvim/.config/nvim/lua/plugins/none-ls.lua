@@ -23,6 +23,7 @@ return {
 				-- null_ls.builtins.formatting.pint,
 				null_ls.builtins.formatting.blade_formatter,
 				null_ls.builtins.formatting.prettierd,
+				null_ls.builtins.formatting.xmlformatter,
 				null_ls.builtins.diagnostics.phpstan,
 				null_ls.builtins.diagnostics.eslint,
 				-- null_ls.builtins.completion.spell,
