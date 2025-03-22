@@ -229,6 +229,9 @@ bindsym $mod+shift+x exec ~/.config/rofi/power-menu
 # Wifi Menu
 bindsym $mod+shift+w exec ~/.config/rofi/wifi-menu
 
+# Bluetooth Menu
+bindsym $mod+shift+b exec --no-startup-id ~/.config/rofi/rofi-bluetooth
+
 # Toggle Mute and Show Notification
 bindsym control+F2 exec ~/.config/i3/toggle_mute
 
