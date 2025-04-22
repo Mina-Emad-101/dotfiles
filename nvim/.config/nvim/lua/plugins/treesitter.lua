@@ -14,8 +14,8 @@ return {
 		}
 
 		-- Highlight @foo.bar as "Identifier" only in Lua files
-		vim.api.nvim_set_hl(0, "@tag.attribute.html", { link = "@spell" })
-		vim.api.nvim_set_hl(0, "@tag.delimiter.html", { link = "@markup.heading" })
+		-- vim.api.nvim_set_hl(0, "@tag.attribute.html", { link = "@spell" })
+		-- vim.api.nvim_set_hl(0, "@tag.delimiter.html", { link = "@markup.heading" })
 
 		require("nvim-treesitter.configs").setup({
 			-- A list of parser names, or "all" (the five listed parsers should always be installed)
