@@ -127,7 +127,7 @@ bindsym $mod+z focus child
 bindsym $mod+Shift+minus move scratchpad
 
 # Rofi Calculator
-bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort > /dev/null"
+bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort -theme-str '#window { width: 20%; height: 30%; }' > /dev/null"
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
