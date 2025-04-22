@@ -27,13 +27,24 @@ return {
 				handlers = {
 					-- require("lsp-zero").default_setup,
 				},
+				automatic_installation = true,
 			})
 		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = {
+			"nvim-java/nvim-java",
+		},
 		config = function()
 			require("neodev").setup()
+			require("java").setup({
+				jdk = {
+					auto_install = true,
+					version = "21.0.6",
+				},
+			})
+
 			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local border = {
@@ -54,6 +65,10 @@ return {
 				return orig_util_open_floating_preview(contents, syntax, opts, ...)
 			end
 
+			lspconfig.eslint_d.setup({
+				capabilities = capabilities,
+			})
+
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
@@ -73,7 +88,7 @@ return {
 			-- 	capabilities = capabilities,
 			-- })
 			lspconfig.intelephense.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			-- lspconfig.stimulus_ls.setup({
 			-- 	capabilities = capabilities
@@ -106,13 +121,13 @@ return {
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, {})
 			vim.keymap.set("n", "]d", vim.diagnostic.goto_next, {})
 			vim.keymap.set("n", "==", vim.lsp.buf.format, {})
-			vim.keymap.set("v", "=", function ()
+			vim.keymap.set("v", "=", function()
 				vim.lsp.buf.format()
 				vim.api.nvim_feedkeys("", "m", false)
 			end, {})
 
 			-- My Extras
-			-- vim.keymap.set("n", "<C-a>", vim.lsp.buf.code_action, {})
+			vim.keymap.set("n", "<F1>", vim.lsp.buf.code_action, {})
 			vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, {})
 		end,
 	},
