@@ -129,6 +129,12 @@ return {
 			-- My Extras
 			vim.keymap.set("n", "<F1>", vim.lsp.buf.code_action, {})
 			vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, {})
+
+
+			-- Java
+			vim.keymap.set("n", "<leader>jr", ":JavaRunnerRunMain<CR>", {})
+			vim.keymap.set("n", "<leader>js", ":JavaRunnerStopMain<CR>", {})
+			vim.keymap.set("n", "<leader>jt", ":JavaRunnerToggleLogs<CR>", {})
 		end,
 	},
 }
