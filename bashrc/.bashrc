@@ -21,6 +21,7 @@ PS1='[\u@\h \W]\$ '
 export EDITOR='nvim'
 export VISUAL='nvim'
 export TERMINAL='alacritty'
+export BROWSER='firefox.desktop'
 
 eval "$(starship init bash)"
 
