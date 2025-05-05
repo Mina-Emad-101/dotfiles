@@ -49,7 +49,7 @@ rm -rf touchpad-settings;
 sudo sed -i "92,93 s/#\s*//" /etc/pacman.conf;
 sudo pacman -Sy;
 
-sudo pacman -S xorg lightdm-gtk-greeter lightdm-gtk-greeter-settings i3 i3lock alacritty rofi pipewire multilib/lib32-pipewire pipewire-pulse pavucontrol dunst picom tmux yazi neovim firefox ttf-jetbrains-mono-nerd starship fzf ripgrep caja lxsession-gtk3 lxappearance lazygit pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse vlc mariadb redis pamixer xclip php php-apache php-fpm php-gd php-imagick php-redis php-sodium php-sqlite composer nodejs npm bluez bluez-utils tree feh noto-fonts noto-fonts-emoji noto-fonts-extra ttf-font-awesome ibus acpi --noconfirm;
+sudo pacman -S xorg lightdm-gtk-greeter lightdm-gtk-greeter-settings i3 i3lock alacritty rofi pipewire multilib/lib32-pipewire pipewire-pulse pavucontrol dunst picom tmux yazi neovim firefox ttf-jetbrains-mono-nerd starship fzf ripgrep caja lxsession-gtk3 lxappearance lazygit pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse vlc mariadb redis pamixer xclip php php-apache php-fpm php-gd php-imagick php-redis php-sodium php-sqlite composer nodejs npm bluez bluez-utils tree feh noto-fonts noto-fonts-emoji noto-fonts-extra ttf-font-awesome ibus acpi qalculate-gtk rofi-calc --noconfirm;
 sudo systemctl enable lightdm.service;
 sudo systemctl enable bluetooth.service
 
