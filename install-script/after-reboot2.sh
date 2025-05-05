@@ -1,5 +1,6 @@
 #!/bin/bash
 
+timedatectl set-ntp true;
 sudo pacman -Syu stow git xf86-input-synaptics --noconfirm --needed;
 
 git config --global user.name "Mina Emad";
