@@ -39,6 +39,25 @@ return {
 		config = function()
 			require("neodev").setup()
 			require("java").setup({
+				jdtls = {
+					version = "v1.43.0",
+					java_opts = {
+						"-Xms128m",
+						"-Xmx1024m",
+					},
+				},
+
+				-- load java debugger plugins
+				java_debug_adapter = {
+					enable = false,
+					version = "0.58.1",
+				},
+
+				spring_boot_tools = {
+					enable = true,
+					version = "1.55.1",
+				},
+
 				jdk = {
 					auto_install = true,
 					version = "21.0.6",
@@ -129,7 +148,6 @@ return {
 			-- My Extras
 			vim.keymap.set("n", "<F1>", vim.lsp.buf.code_action, {})
 			vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, {})
-
 
 			-- Java
 			vim.keymap.set("n", "<leader>jr", ":JavaRunnerRunMain<CR>", {})
