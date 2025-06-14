@@ -11,6 +11,7 @@ git config --global init.defaultBranch main;
 
 git clone https://github.com/mina-emad-101/dotfiles.git;
 rm -rf dotfiles/tmux/.config/tmux/plugins;
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 rm -rf $HOME/.bashrc;
 cd dotfiles;
