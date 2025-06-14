@@ -7,8 +7,7 @@ echo "mina:3569" | chpasswd;
 
 rm -rf /after-reboot.sh;
 
-echo " --------------------------------------- ";
-echo "| WIFI is now available for dell laptop |";
-echo "| Now Reboot and Login as mina          |";
-echo "| then run /after-reboot2.sh            |";
-echo " --------------------------------------- ";
+echo " ---------------------------------- ";
+echo "| Now Reboot and Login as mina     |";
+echo "| then run /after-reboot2.sh       |";
+echo " ---------------------------------- ";
