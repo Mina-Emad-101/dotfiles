@@ -41,3 +41,7 @@ function y() {
 }
 
 bind '"\C-f":"tmux-sessionizer\n"'
+
+export PATH="$PATH:$HOME/Documents/Eficta/zatca/Apps/"
+export FATOORA_HOME="$HOME/Documents/Eficta/zatca/Apps"
+export SDK_CONFIG="$HOME/Documents/Eficta/zatca/Configuration/config.json"
