@@ -58,6 +58,13 @@ sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 sudo cp -r .themes/Dracula /usr/share/themes/
 sudo cp -r .icons/Dracula /usr/share/icons/;
 
+sudo cp $HOME/.wallpaper /
+sudo echo '' > /etc/lightdm/lightdm-gtk-greeter.conf;
+sudo echo '[greeter]' >> /etc/lightdm/lightdm-gtk-greeter.conf;
+sudo echo 'theme-name = Dracula' >> /etc/lightdm/lightdm-gtk-greeter.conf;
+sudo echo 'icon-theme-name = Dracula' >> /etc/lightdm/lightdm-gtk-greeter.conf;
+sudo echo 'background = /.wallpaper' >> /etc/lightdm/lightdm-gtk-greeter.conf;
+
 git clone https://aur.archlinux.org/paru.git;
 cd paru;
 makepkg -si;
