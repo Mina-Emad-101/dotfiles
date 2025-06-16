@@ -55,7 +55,7 @@ sudo systemctl enable lightdm.service;
 sudo systemctl enable bluetooth.service
 sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 
-sudo cp -r .themes/Dracula /usr/share/themes/
+sudo cp -r .themes/Dracula /usr/share/themes/;
 sudo cp -r .icons/Dracula /usr/share/icons/;
 
 sudo cp $HOME/.wallpaper /
@@ -64,6 +64,12 @@ sudo echo '[greeter]' >> /etc/lightdm/lightdm-gtk-greeter.conf;
 sudo echo 'theme-name = Dracula' >> /etc/lightdm/lightdm-gtk-greeter.conf;
 sudo echo 'icon-theme-name = Dracula' >> /etc/lightdm/lightdm-gtk-greeter.conf;
 sudo echo 'background = /.wallpaper' >> /etc/lightdm/lightdm-gtk-greeter.conf;
+
+
+git clone https://github.com/dracula/grub.git;
+sudo cp -r grub/dracula /boot/grub/themes/;
+sudo sed -i 's/#GRUB_THEME.*/GRUB_THEME="/boot/grub/themes/dracula/theme.txt"';
+sudo grub-mkconfig -o /boot/grub/grub.cfg;
 
 git clone https://aur.archlinux.org/paru.git;
 cd paru;
