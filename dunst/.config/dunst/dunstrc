@@ -446,7 +446,7 @@
 
 [ignore-discord]
     # This notification will not be displayed
-    appname = "vesktop"
+    appname = "discord"
     skip_display = true
 		script = ~/.config/dunst/discord_urgency.sh
 
