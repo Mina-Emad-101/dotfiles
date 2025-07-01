@@ -343,3 +343,4 @@ exec_always /usr/bin/dunst
 
 # Startup Apps
 exec --no-startup-id firefox
+exec --no-startup-id discord
