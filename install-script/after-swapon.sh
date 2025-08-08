@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacstrap -K /mnt base linux linux-firmware base-devel linux-headers broadcom-wl networkmanager sof-firmware vim bash-completion os-prober git;
+pacstrap -K /mnt base linux linux-firmware base-devel linux-headers networkmanager sof-firmware vim bash-completion os-prober git;
 genfstab -U /mnt >> /mnt/etc/fstab;
 SCRIPT_DIR="$(dirname "$0")";
 cp "$SCRIPT_DIR/after-chroot.sh" /mnt;

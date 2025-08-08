@@ -87,9 +87,6 @@ rm -rf paru;
 sudo npm install -g pnpm@10.7.1
 paru -S noto-fonts-ar gscreenshot navicat16-premium-en postman-bin i3lockmore-git vesktop --noconfirm;
 
-curl -O "blob:https://github.com/6e2dd271-a3c9-4627-8af4-4de4b6c61c1a";
-sudo mv BCM43142A0-0a5c-21d7.hcd /lib/firmware/brcm/;
-
 sudo sh -c 'echo "AllowUsers mina" > /etc/ssh/sshd_config.d/allow-users.conf'
 
 sudo rm -rf /after-reboot2.sh;
