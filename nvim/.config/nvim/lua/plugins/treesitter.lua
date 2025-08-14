@@ -2,17 +2,6 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 	config = function()
-		local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
-
-		parser_config.blade = {
-			install_info = {
-				url = "https://github.com/EmranMR/tree-sitter-blade",
-				files = { "src/parser.c" },
-				branch = "main",
-			},
-			filetype = "blade",
-		}
-
 		-- Highlight @foo.bar as "Identifier" only in Lua files
 		-- vim.api.nvim_set_hl(0, "@tag.attribute.html", { link = "@spell" })
 		-- vim.api.nvim_set_hl(0, "@tag.delimiter.html", { link = "@markup.heading" })
