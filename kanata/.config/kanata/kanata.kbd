@@ -1,0 +1,74 @@
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defsrc
+  esc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(defvar
+  tap-time 200
+  hold-time 200
+)
+
+(defalias
+  m1a (tap-hold $tap-time $hold-time a lmet)
+  m1s (tap-hold $tap-time $hold-time s lalt)
+  m1d (tap-hold $tap-time $hold-time d lctl)
+  m1; (tap-hold $tap-time $hold-time ; lmet)
+  m1l (tap-hold $tap-time $hold-time l lalt)
+  m1k (tap-hold $tap-time $hold-time k lctl)
+
+  m2a (tap-hold $tap-time $hold-time S-1 lmet)
+  m2s (tap-hold $tap-time $hold-time S-2 lalt)
+  m2d (tap-hold $tap-time $hold-time S-3 lctl)
+  m2; (tap-hold $tap-time $hold-time S-0 lmet)
+  m2l (tap-hold $tap-time $hold-time = lalt)
+  m2k (tap-hold $tap-time $hold-time - lctl)
+)
+
+(defalias
+  l1 (layer-switch l1)
+  l2 (tap-dance 500
+  	((one-shot-press-pcancel 1000 (layer-while-held l2))
+	(layer-switch l2))
+  )
+  l3 (layer-switch l3)
+)
+
+(defvar up ArrowUp)
+(defvar dn ArrowDown)
+(defvar lt ArrowLeft)
+(defvar rt ArrowRight)
+
+(deflayer l1
+  esc
+  grv  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  tab  q    w    e    r    t    y    u    i    o    p    bspc XX  \
+  @l2  @m1a @m1s @m1d f    g    h    j    @m1k @m1l @m1; '    XX
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  XX   XX   XX             spc            XX   XX   XX        
+)
+
+(deflayer l2
+  esc
+  grv  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  tab  1    2    3    4    5    6    7    8    9    0    bspc XX  \
+  @l3  @m2a @m2s @m2d [    ]    S-[  S-]  @m2k @m2l @m2; ret  XX
+  lsft S-1  S-2  S-3  S-4  S-5  S-6  S-7  S-8  S-9  S-0  rsft
+  XX   XX   XX             @l1            XX   XX   XX        
+)
+
+(deflayer l3
+  esc
+  grv  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  tab  XX   XX   $up  XX   XX   /    7    8    9    -    bspc XX  \
+  @l2  XX   $lt  $dn  $rt  XX   S-8  4    5    6    +    ret  XX
+  lsft XX   XX   XX   XX   XX   XX   1    2    3    .    rsft
+  XX   XX   XX             @l1            XX   XX   XX        
+)
