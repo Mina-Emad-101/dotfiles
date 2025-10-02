@@ -14,7 +14,7 @@ return {
 					"lua_ls",
 					-- "pylsp",
 					"pyright",
-					"jdtls",
+					-- "jdtls",
 					-- "java_language_server",
 					"html",
 					"cssls",
@@ -50,7 +50,6 @@ return {
 				-- load java debugger plugins
 				java_debug_adapter = {
 					enable = false,
-					version = "0.58.1",
 				},
 
 				spring_boot_tools = {
@@ -93,9 +92,9 @@ return {
 			lspconfig.pyright.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.jdtls.setup({
-				capabilities = capabilities,
-			})
+			-- lspconfig.jdtls.setup({
+			-- 	capabilities = capabilities,
+			-- })
 			-- lspconfig.java_language_server.setup({
 			-- 	capabilities = capabilities,
 			-- })
