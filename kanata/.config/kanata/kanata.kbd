@@ -24,10 +24,10 @@
   m1l (tap-hold $tap-time $hold-time l lalt)
   m1k (tap-hold $tap-time $hold-time k lctl)
 
-  m2a (tap-hold $tap-time $hold-time S-1 lmet)
-  m2s (tap-hold $tap-time $hold-time S-2 lalt)
+  m2a (tap-hold $tap-time $hold-time \ lmet)
+  m2s (tap-hold $tap-time $hold-time grv lalt)
   m2d (tap-hold $tap-time $hold-time S-3 lctl)
-  m2; (tap-hold $tap-time $hold-time S-0 lmet)
+  m2; (tap-hold $tap-time $hold-time \ lmet)
   m2l (tap-hold $tap-time $hold-time = lalt)
   m2k (tap-hold $tap-time $hold-time - lctl)
 )
@@ -49,10 +49,10 @@
 (deflayer l1
   esc
   grv  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
-  tab  q    w    e    r    t    y    u    i    o    p    bspc XX  \
+  tab  q    w    e    r    t    y    u    i    o    p    bspc ]   \
   @l2  @m1a @m1s @m1d f    g    h    j    @m1k @m1l @m1; '    XX
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  XX   XX   XX             spc            XX   XX   XX        
+  lctl XX   XX             spc            XX   XX   XX        
 )
 
 (deflayer l2

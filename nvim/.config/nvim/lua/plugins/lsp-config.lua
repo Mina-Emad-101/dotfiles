@@ -84,10 +84,6 @@ return {
 				return orig_util_open_floating_preview(contents, syntax, opts, ...)
 			end
 
-			lspconfig.eslint_d.setup({
-				capabilities = capabilities,
-			})
-
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
