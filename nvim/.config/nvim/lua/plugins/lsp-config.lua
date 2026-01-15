@@ -35,6 +35,7 @@ return {
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			"nvim-java/nvim-java",
+			"ionide/Ionide-vim",
 		},
 		config = function()
 			require("neodev").setup()

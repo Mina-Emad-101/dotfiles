@@ -45,3 +45,10 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.tabstop = 2
 	end
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "fs,fsx,fsharp",
+	callback = function()
+		vim.opt.expandtab = true
+	end
+})
