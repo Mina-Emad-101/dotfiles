@@ -16,4 +16,8 @@ return {
 	},
 	event = { "VeryLazy" },
 	config = true,
+	cond = function()
+	  return vim.fn.filereadable("artisan") == 1
+		  or vim.fn.filereadable("composer.json") == 1
+	end,
 }

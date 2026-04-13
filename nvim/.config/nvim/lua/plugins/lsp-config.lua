@@ -41,30 +41,33 @@ return {
 			require("neodev").setup()
 			require("java").setup({
 				jdtls = {
-					version = "v1.43.0",
 					java_opts = {
 						"-Xms128m",
 						"-Xmx1024m",
 					},
 				},
+				lombok = {
+					enable = true,
+				},
 
-				-- load java debugger plugins
+				java_test = {
+					enable = true,
+				},
+
 				java_debug_adapter = {
 					enable = false,
 				},
 
 				spring_boot_tools = {
 					enable = true,
-					version = "1.55.1",
 				},
 
+				-- JDK installation
 				jdk = {
 					auto_install = true,
-					version = "21.0.6",
 				},
 			})
 
-			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local border = {
 				{ "╭", "FloatBorder" },
@@ -84,40 +87,40 @@ return {
 				return orig_util_open_floating_preview(contents, syntax, opts, ...)
 			end
 
-			lspconfig.lua_ls.setup({
+			vim.lsp.config('lua_ls', {
 				capabilities = capabilities,
 			})
-			-- lspconfig.pylsp.setup({
+			-- vim.lsp.config('pylsp', {
 			-- 	capabilities = capabilities
 			-- })
-			lspconfig.pyright.setup({
+			vim.lsp.config('pyright', {
 				capabilities = capabilities,
 			})
-			-- lspconfig.jdtls.setup({
+			-- vim.lsp.config('jdtls', {
 			-- 	capabilities = capabilities,
 			-- })
-			-- lspconfig.java_language_server.setup({
+			-- vim.lsp.config('java_language_server', {
 			-- 	capabilities = capabilities,
 			-- })
-			-- lspconfig.phpactor.setup({
+			-- vim.lsp.config('phpactor', {
 			-- 	capabilities = capabilities,
 			-- })
-			lspconfig.intelephense.setup({
+			vim.lsp.config('intelephense', {
 				capabilities = capabilities,
 			})
-			-- lspconfig.stimulus_ls.setup({
+			-- vim.lsp.config('stimulus_ls', {
 			-- 	capabilities = capabilities
 			-- })
-			lspconfig.html.setup({
+			vim.lsp.config('html', {
 				capabilities = capabilities,
 			})
-			lspconfig.cssls.setup({
+			vim.lsp.config('cssls', {
 				capabilities = capabilities,
 			})
-			lspconfig.clangd.setup({
+			vim.lsp.config('clangd', {
 				capabilities = capabilities,
 			})
-			lspconfig.ts_ls.setup({
+			vim.lsp.config('ts_ls', {
 				capabilities = capabilities,
 			})
 
