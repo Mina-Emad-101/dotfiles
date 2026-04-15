@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NAME=$(echo "$1" | awk -F"/" '{print $NF}');
+NAME=$(blkid | grep "$1" | grep -o 'LABEL="[^"]*"' | grep -o '".*"' | sed 's/"//g');
 
 ntfsfix "$1";
 umount "/run/media/mina/$NAME";

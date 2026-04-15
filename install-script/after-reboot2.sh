@@ -59,8 +59,10 @@ sudo systemctl enable syncthing@mina.service
 sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql;
 sudo sed -i "s/#bind-address=0.0.0.0/bind-address=0.0.0.0/" /etc/my.cnf.d/server.cnf;
 
-sudo sed -i "s/NoDisplay=true/NoDisplay=false/" /usr/share/applications/caja.desktop;
-sudo sed -i "s/OnlyShowIn=MATE;//" /usr/share/applications/caja.desktop;
+sudo mkdir /home/mina/.local/share/applications -p;
+sudo cp /usr/share/applications/caja.desktop /home/mina/.local/share/applications/caja.desktop;
+sudo sed -i "s/NoDisplay=true/NoDisplay=false/" /home/mina/.local/share/applications/caja.desktop;
+sudo sed -i "s/OnlyShowIn=MATE;//" /home/mina/.local/share/applications/caja.desktop;
 
 sudo cp -r .themes/Dracula /usr/share/themes/;
 sudo cp -r .icons/Dracula /usr/share/icons/;
