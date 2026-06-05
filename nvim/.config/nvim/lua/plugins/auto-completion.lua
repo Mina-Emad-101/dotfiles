@@ -35,6 +35,7 @@ return {
 				s("html", fmt("<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>{}</title>\n\t</head>\n\t<body>\n\t\t{}\n\t</body>\n</html>", { i(1), i(2) }))
 			})
 		ls.add_snippets("php", {
+				s("php", fmt("<?php\n\nnamespace {}", { i(1) })),
 				s("relation", fmt("/**\n* @return {}<{}, $this>\n*/\npublic function {}(): {}\n{{\n\treturn $this->{}({}::class);\n}}", {
 					i(1),
 					i(2),
