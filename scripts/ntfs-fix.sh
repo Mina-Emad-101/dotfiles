@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NAME=$(blkid | grep "$1" | grep -o 'LABEL="[^"]*"' | grep -o '".*"' | sed 's/"//g');
+NAME=$(blkid | grep "$1" | grep -o 'LABEL="[^"]*"' | grep -o '".*"' | sed 's/"//g' | uniq);
 
 ntfsfix "$1";
 umount "/run/media/mina/$NAME";
